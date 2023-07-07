@@ -1,5 +1,5 @@
 {% set name = "threddsclient" %}
-{% set version = "0.4.2" %}
+{% set version = "0.4.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: be496da24b523f518818c98c9b901845bc9c6e6d0fef12b48f25e33efeeb63a3
+  sha256: ea5915347b24df95045422082d1157f5baee92ee4fabb5a45e2b4cf196881755
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -35,7 +35,7 @@ about:
   home: https://github.com/bird-house/threddsclient
   license: Apache-2.0
   license_file: LICENCE.txt
-  summary: 'Thredds catalog client in Python'
+  summary: Thredds catalog client in Python
   doc_url: https://pypi.org/project/threddsclient/
   dev_url: https://github.com/bird-house/threddsclient
 
