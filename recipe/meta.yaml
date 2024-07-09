@@ -1,5 +1,5 @@
 {% set name = "threddsclient" %}
-{% set version = "0.4.5" %}
+{% set version = "0.4.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bf0c5c50423fb26089a2a858599fb504ab8e478a67b894fffa949e30e1b5711e
+  sha256: 6778e052e3a512caeca1d5f44f54b9b4b895f0301de9f62619cd866db365c60f
 
 build:
   number: 0
