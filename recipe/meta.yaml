@@ -6,20 +6,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 6778e052e3a512caeca1d5f44f54b9b4b895f0301de9f62619cd866db365c60f
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - requests
     - beautifulsoup4
     - lxml
@@ -30,6 +30,7 @@ test:
 
   requires:
     - pytest
+    - python {{ python_min }}
 
 about:
   home: https://github.com/bird-house/threddsclient
