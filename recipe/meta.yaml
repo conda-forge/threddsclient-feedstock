@@ -1,5 +1,6 @@
 {% set name = "threddsclient" %}
 {% set version = "0.4.7" %}
+{% set python_min = "3.8.0" %}
 
 package:
   name: {{ name|lower }}
